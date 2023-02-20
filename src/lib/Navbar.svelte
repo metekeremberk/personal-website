@@ -1,14 +1,14 @@
 <script lang="ts">
-	import { page } from '$app/stores';
-
-	console.log($page.url.href);
+	import NavLink from './NavLink.svelte';
 </script>
 
-<div class="flex flex-row justify-between px-14 py-8 bg-neutral-800 text-white">
-	<div class="text-3xl hover:cursor-default">Logo</div>
-	<nav class="text-xl flex flex-row justify-between w-1/4">
-		<a href="/">Home</a>
-		<a href="/about">About Me</a>
-		<a href="/contacts">My Contacts</a>
+<div
+	class="flex flex-row items-center justify-between h-[15vh] px-14 bg-navbarBackground text-white"
+>
+	<div class="text-3xl font-bold hover:cursor-default">metekeremberk</div>
+	<nav class="text-xl font-semibold flex flex-row items-center justify-between w-1/4">
+		<NavLink href="/" title="Home" />
+		<NavLink href="/about" title="About Me" />
+		<NavLink href="/contacts" title="Contacts" />
 	</nav>
 </div>
