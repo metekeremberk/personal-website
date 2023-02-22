@@ -9,6 +9,8 @@ module.exports = {
         "headline": "#020826",
         "paragraph": "#716040",
 
+        "cardText": "#020826",
+
         "button": "#8c7851",
         "buttonText": "#fffffe",
 
@@ -18,10 +20,11 @@ module.exports = {
         "illustrationSecondary": "#eaddcf",
         "illustrationTertiary": "#f25042",
 
-        "navbarBackground": "#8c7851",
-        "navbarText": "#fffffe",
-        "navbarBackgroundSecondary": "#eaddcf",
-        
+        "homeBackground": "#020826",
+        "homeText": "#fffffe",
+        "homeBackgroundSecondary": "#eaddcf",
+        "homeLink": "#716040",
+
       },
       fontFamily: {
         
