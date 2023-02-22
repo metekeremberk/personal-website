@@ -27,7 +27,7 @@
 		<img
 			src="src/lib/background.jpg"
 			alt="background"
-			class="object-cover w-screen h-[110vh] opacity-30"
+			class="object-cover w-screen h-[120vh] opacity-30"
 		/>
 		<h1 class="absolute top-[75vh] left-1/2 -translate-x-1/2 text-7xl font-bold">metekeremberk</h1>
 	</div>
