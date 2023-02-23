@@ -39,7 +39,7 @@
 		<!-- Parts -->
 		<div use:scrollRef={"home"} class="w-screen h-[120vh] bg-backgroundPrimary">
 			<img
-				src="static/assets/background.jpg"
+				src="/assets/background.jpg"
 				alt="background"
 				class="object-cover w-screen h-[120vh] opacity-30"
 			/>
@@ -54,7 +54,7 @@
 			class="w-screen h-screen my-[10vh] flex flex-col items-center justify-evenly"
 		>
 			<AboutCard
-				imageUrl="static/assets/about-1.JPG"
+				imageUrl="/assets/about-1.JPG"
 				title="study"
 				link="https://fens.sabanciuniv.edu/en"
 				text={[
@@ -69,7 +69,7 @@
 			class="h-screen my-[10vh] w-screen flex flex-col items-center justify-evenly"
 		>
 			<AboutCard
-				imageUrl="static/assets/about-2.jpg"
+				imageUrl="/assets/about-2.jpg"
 				title="hobbies"
 				text="In my free time, I enjoy playing tennis, staying active with other
 			sports, exploring the world of video games and having fun with my
