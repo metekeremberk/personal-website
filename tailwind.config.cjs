@@ -1,6 +1,6 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ['./src/**/*.{html,js,svelte,ts}'],
+const config = {
+  content: ["./src/**/*.{html,js,svelte,ts}"],
+
   theme: {
     extend: {
       colors: {
@@ -24,12 +24,11 @@ module.exports = {
         "homeText": "#fffffe",
         "homeBackgroundSecondary": "#eaddcf",
         "homeLink": "#716040",
-
-      },
-      fontFamily: {
-        
       },
     },
   },
+
   plugins: [],
-}
+};
+
+module.exports = config;
