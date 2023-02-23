@@ -24,18 +24,21 @@
 		style="--pattern-y: {scrollPerc}px; --pattern-x: {scrollPercx}%;"
 	>
 		<!-- Navigation buttons -->
-		<div
-			class="absolute top-[37vh] bottom-[80vh] right-10 w-1 rounded-full z-40 bg-backgroundSecondary"
-		/>
-		<div
-			class="fixed right-10 top-[35%] h-[30vh] w-1 py-6 flex flex-col items-center justify-around z-50"
-		>
-			<ScrollButton scrollRef="home" tooltipText="Top" />
-			<ScrollButton scrollRef="about-1" tooltipText="Academic" />
-			<ScrollButton scrollRef="about-2" tooltipText="Hobbies" />
-			<ScrollButton scrollRef="portfolio" tooltipText="Achievements" />
-			<ScrollButton scrollRef="contact" tooltipText="Contacts" />
+		<div class="hidden lg:block">
+			<div
+				class="absolute top-[37vh] bottom-[80vh] right-10 w-1 rounded-full z-40 bg-backgroundSecondary"
+			/>
+			<div
+				class="fixed right-10 top-[35%] h-[30vh] w-1 py-6 flex flex-col items-center justify-around z-50"
+			>
+				<ScrollButton scrollRef="home" tooltipText="Top" />
+				<ScrollButton scrollRef="about-1" tooltipText="Academic" />
+				<ScrollButton scrollRef="about-2" tooltipText="Hobbies" />
+				<ScrollButton scrollRef="portfolio" tooltipText="Achievements" />
+				<ScrollButton scrollRef="contact" tooltipText="Contacts" />
+			</div>
 		</div>
+
 		<!-- Parts -->
 		<div use:scrollRef={"home"} class="w-screen h-[120vh] bg-backgroundPrimary">
 			<img
@@ -44,7 +47,7 @@
 				class="object-cover w-screen h-[120vh] opacity-30"
 			/>
 			<h1
-				class="absolute top-[75vh] left-1/2 -translate-x-1/2 text-7xl font-bold"
+				class="absolute top-[75vh] left-1/2 -translate-x-1/2 text-4xl lg:text-7xl font-bold"
 			>
 				metekeremberk
 			</h1>
@@ -88,7 +91,7 @@
 			class="w-screen h-screen mt-[10vh] flex items-end"
 		>
 			<div
-				class="flex flex-col items-center justify-around py-12 w-screen h-1/3 bg-backgroundSecondary text-xl"
+				class="flex flex-col items-center justify-around py-12 w-screen h-1/3 bg-backgroundSecondary lg:text-2xl text-xl"
 			>
 				<div>metekeremberk@gmail.com</div>
 				<div>+90 5** *** ** **</div>

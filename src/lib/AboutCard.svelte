@@ -6,7 +6,7 @@
 </script>
 
 <div
-	class="flex flex-col items-center justify-evenly w-[400px] m-auto p-6 bg-backgroundSecondaryLight border-4 border-accentTertiary"
+	class="flex flex-col items-center justify-evenly lg:w-[400px] w-[250px] m-auto p-6 bg-backgroundSecondaryLight border-4 border-accentTertiary"
 >
 	<img
 		src={imageUrl}
@@ -14,11 +14,11 @@
 		class="object-cover border-accentTertiary border-4 mb-10"
 	/>
 	{#if link == null}
-		<div class="text-center text-lg text-textPrimary">
+		<div class="text-textPrimary text-center lg:text-lg text-sm">
 			{text}
 		</div>
 	{:else}
-		<div class="text-center text-lg text-textPrimary">
+		<div class="text-textPrimary text-center lg:text-lg text-sm">
 			{text[0]}
 			<a
 				href={link}
