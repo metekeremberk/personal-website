@@ -1,6 +1,7 @@
 <script>
 	import { scrollTo, scrollRef } from "svelte-scrolling";
 	import AboutCard from "./lib/AboutCard.svelte";
+	import AchievementsGrid from "./lib/AchievementsGrid.svelte";
 	import ScrollButton from "./lib/ScrollButton.svelte";
 
 	let scrollY = 0;
@@ -22,6 +23,7 @@
 		bind:clientHeight
 		style="--pattern-y: {scrollPerc}px; --pattern-x: {scrollPercx}%;"
 	>
+		<!-- Navigation buttons -->
 		<div
 			class="absolute top-[37vh] bottom-[80vh] right-10 w-1 rounded-full z-40 bg-backgroundSecondary"
 		/>
@@ -34,6 +36,7 @@
 			<ScrollButton scrollRef="portfolio" tooltipText="Achievements" />
 			<ScrollButton scrollRef="contact" tooltipText="Contacts" />
 		</div>
+		<!-- Parts -->
 		<div use:scrollRef={"home"} class="w-screen h-[120vh] bg-backgroundPrimary">
 			<img
 				src="src/assets/background.jpg"
@@ -73,7 +76,13 @@
 			friends."
 			/>
 		</div>
-		<div use:scrollRef={"portfolio"} class="w-screen h-screen my-[10vh]">a</div>
+		<div use:scrollRef={"portfolio"} class="w-screen h-screen my-[10vh]">
+			<div
+				class="w-4/5 h-4/5 relative top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2"
+			>
+				<AchievementsGrid />
+			</div>
+		</div>
 		<div
 			use:scrollRef={"contact"}
 			class="w-screen h-screen mt-[10vh] flex items-end"
