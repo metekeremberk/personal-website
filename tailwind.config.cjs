@@ -4,26 +4,17 @@ const config = {
   theme: {
     extend: {
       colors: {
-        "background": "#f9f4ef",
-        "backgroundSecondary": "#eaddcf",
-        "headline": "#020826",
-        "paragraph": "#716040",
+        "backgroundPrimary": "#020826",
+        "backgroundPrimaryLight": "#2f4f76",
+        "backgroundSecondary": "#7d6f5e",
+        "backgroundSecondaryLight": "#cebeab",
 
-        "cardText": "#020826",
+        "accentPrimary": "#e6d8c2",
+        "accentSecondary": "#ebdfd2",
+        "accentTertiary": "#ffffff",
 
-        "button": "#8c7851",
-        "buttonText": "#fffffe",
-
-        "illustrationBorder": "#020826",
-        "illustrationMain": "#fffffe",
-        "illustrationHighlight": "#8c7851",
-        "illustrationSecondary": "#eaddcf",
-        "illustrationTertiary": "#f25042",
-
-        "homeBackground": "#020826",
-        "homeText": "#fffffe",
-        "homeBackgroundSecondary": "#eaddcf",
-        "homeLink": "#716040",
+        "textPrimary": "#ffffff",
+        "textSecondary": "#2f4f76",
       },
     },
   },

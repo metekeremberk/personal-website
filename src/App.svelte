@@ -1,5 +1,7 @@
 <script>
 	import { scrollTo, scrollRef } from "svelte-scrolling";
+	import AboutCard from "./lib/AboutCard.svelte";
+	import ScrollButton from "./lib/ScrollButton.svelte";
 
 	let scrollY = 0;
 	let innerHeight = 0;
@@ -7,6 +9,9 @@
 	// $: scrollPerc = (scrollY * 100) / (clientHeight - innerHeight);
 	$: scrollPerc = scrollY * 0.85;
 	let scrollPercx = 110;
+
+	if (scrollY) {
+	}
 </script>
 
 <svelte:window bind:scrollY bind:innerHeight />
@@ -18,30 +23,18 @@
 		style="--pattern-y: {scrollPerc}px; --pattern-x: {scrollPercx}%;"
 	>
 		<div
-			class="fixed right-10 top-[30%] bg-homeBackgroundSecondary h-[40vh] w-1 py-10 rounded-full flex flex-col items-center justify-around z-50"
+			class="absolute top-[37vh] bottom-[80vh] right-10 w-1 rounded-full z-40 bg-backgroundSecondary"
+		/>
+		<div
+			class="fixed right-10 top-[35%] h-[30vh] w-1 py-6 flex flex-col items-center justify-around z-50"
 		>
-			<div
-				use:scrollTo={{ ref: "home", duration: 1000 }}
-				class="w-3 h-3 rounded-full bg-white"
-			/>
-			<div
-				use:scrollTo={{ ref: "about-1", duration: 1000 }}
-				class="w-3 h-3 rounded-full bg-white"
-			/>
-			<div
-				use:scrollTo={{ ref: "about-2", duration: 1000 }}
-				class="w-3 h-3 rounded-full bg-white"
-			/>
-			<div
-				use:scrollTo={{ ref: "scroll", duration: 1000 }}
-				class="w-3 h-3 rounded-full bg-white"
-			/>
-			<div
-				use:scrollTo={{ ref: "home", duration: 1000 }}
-				class="w-3 h-3 rounded-full bg-white"
-			/>
+			<ScrollButton scrollRef="home" tooltipText="Top" />
+			<ScrollButton scrollRef="about-1" tooltipText="Academic" />
+			<ScrollButton scrollRef="about-2" tooltipText="Hobbies" />
+			<ScrollButton scrollRef="portfolio" tooltipText="Achievements" />
+			<ScrollButton scrollRef="contact" tooltipText="Contacts" />
 		</div>
-		<div use:scrollRef={"home"} class="w-screen h-[120vh] bg-homeBackground">
+		<div use:scrollRef={"home"} class="w-screen h-[120vh] bg-backgroundPrimary">
 			<img
 				src="src/assets/background.jpg"
 				alt="background"
@@ -57,51 +50,41 @@
 			use:scrollRef={"about-1"}
 			class="w-screen h-screen my-[10vh] flex flex-col items-center justify-evenly"
 		>
-			<div
-				class="flex flex-col items-center justify-evenly w-[400px] m-auto p-6 bg-homeBackgroundSecondary border-4 border-homeText"
-			>
-				<img
-					src="src/assets/about-1.jpg"
-					alt="study"
-					class="object-cover border-homeText border-4 mb-10"
-				/>
-				<div class="text-center text-lg text-headline">
-					I am a student in the
-					<a
-						href="https://fens.sabanciuniv.edu/en"
-						class="underline text-homeLink hover:text-homeText"
-					>
-						Faculty of Engineering and Natural Sciences
-					</a>
-					at Sabancı University with a passion for computer engineering. I am dedicated
-					to pursuing my goals and working hard to achieve them.
-				</div>
-			</div>
+			<AboutCard
+				imageUrl="src/assets/about-1.jpg"
+				title="study"
+				link="https://fens.sabanciuniv.edu/en"
+				text={[
+					"I am a student in the",
+					"Faculty of Engineering and Natural Sciences",
+					"at Sabancı University with a passion for computer engineering. I am dedicated to pursuing my goals and working hard to achieve them.",
+				]}
+			/>
 		</div>
 		<div
 			use:scrollRef={"about-2"}
 			class="h-screen my-[10vh] w-screen flex flex-col items-center justify-evenly"
 		>
-			<div
-				class="flex flex-col items-center justify-evenly w-[400px] m-auto p-6 bg-homeBackgroundSecondary border-4 border-homeText"
-			>
-				<img
-					src="src/assets/about-2.jpg"
-					alt="hobbies"
-					class="object-cover border-homeText border-4 mb-10"
-				/>
-				<div class="text-center text-lg text-headline">
-					In my free time, I enjoy playing tennis, staying active with other
-					sports, exploring the world of video games and having fun with my
-					friends.
-				</div>
-			</div>
+			<AboutCard
+				imageUrl="src/assets/about-2.jpg"
+				title="hobbies"
+				text="In my free time, I enjoy playing tennis, staying active with other
+			sports, exploring the world of video games and having fun with my
+			friends."
+			/>
 		</div>
+		<div use:scrollRef={"portfolio"} class="w-screen h-screen my-[10vh]">a</div>
 		<div
-			use:scrollRef={"scroll"}
-			class="w-screen h-screen my-[10vh] flex items-end"
+			use:scrollRef={"contact"}
+			class="w-screen h-screen mt-[10vh] flex items-end"
 		>
-			You have scrolled {scrollY} out of {clientHeight}
+			<div
+				class="flex flex-col items-center justify-around py-12 w-screen h-1/3 bg-backgroundSecondary text-xl"
+			>
+				<div>metekeremberk@gmail.com</div>
+				<div>+90 5** *** ** **</div>
+				<div>Social media</div>
+			</div>
 		</div>
 	</div>
 </main>
