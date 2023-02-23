@@ -69,7 +69,7 @@
 			class="h-screen my-[10vh] w-screen flex flex-col items-center justify-evenly"
 		>
 			<AboutCard
-				imageUrl="/assets/about-2.jpg"
+				imageUrl="/assets/about-2.JPG"
 				title="hobbies"
 				text="In my free time, I enjoy playing tennis, staying active with other
 			sports, exploring the world of video games and having fun with my
