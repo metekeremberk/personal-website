@@ -81,7 +81,7 @@
 		</div>
 		<div use:scrollRef={"portfolio"} class="w-screen h-screen my-[10vh]">
 			<div
-				class="w-4/5 h-4/5 relative top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2"
+				class="w-4/5 h-4/5 lg:w-[1000px] lg:h-[700px] relative top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2"
 			>
 				<AchievementsGrid />
 			</div>

@@ -1,4 +1,4 @@
-<div class="w-full h-full grid lg:grid-cols-3">
+<div class="w-full h-full grid lg:grid-cols-3 gap-2">
 	<div
 		class="bg-backgroundSecondary flex flex-col justify-center items-center lg:text-2xl text-xl"
 	>
@@ -30,6 +30,7 @@
 	<div
 		class="bg-backgroundSecondary flex flex-col justify-center items-center lg:text-2xl text-xl"
 	>
-		<h1 class="font-semibold">IDK</h1>
+		<h1 class="font-semibold">Tennis</h1>
+		<h1 class="text-center">2nd places in the 14, 16, adult tournaments.</h1>
 	</div>
 </div>

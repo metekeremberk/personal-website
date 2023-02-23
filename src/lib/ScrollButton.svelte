@@ -11,7 +11,7 @@
 		class="w-3 h-3 rounded-full bg-accentSecondary inline-block relative"
 	>
 		<div
-			class="hidden right-8 bg-backgroundSecondary rounded-md py-1 px-2 absolute group-hover:flex top-1/2 -translate-y-1/2"
+			class="hidden right-8 bg-backgroundSecondary rounded-md py-1 px-2 absolute top-1/2 -translate-y-1/2 group-hover:block"
 		>
 			{tooltipText}
 		</div>
