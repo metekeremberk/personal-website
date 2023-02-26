@@ -1,21 +1,17 @@
 <script>
-	import { scrollTo, scrollRef } from "svelte-scrolling";
+	import { scrollRef } from "svelte-scrolling";
 	import AboutCard from "./lib/AboutCard.svelte";
 	import AchievementsGrid from "./lib/AchievementsGrid.svelte";
 	import ScrollButton from "./lib/ScrollButton.svelte";
 
 	let scrollY = 0;
-	let innerHeight = 0;
-	let clientHeight = 0;
-	// $: scrollPerc = (scrollY * 100) / (clientHeight - innerHeight);
 	$: scrollPerc = scrollY * 0.85;
 	let scrollPercx = 110;
 
-	if (scrollY) {
-	}
+	let clientHeight = 0;
 </script>
 
-<svelte:window bind:scrollY bind:innerHeight />
+<svelte:window bind:scrollY />
 
 <main>
 	<div
@@ -40,11 +36,11 @@
 		</div>
 
 		<!-- Parts -->
-		<div use:scrollRef={"home"} class="w-screen h-[120vh] bg-backgroundPrimary">
+		<div use:scrollRef={"home"} class="h-[120vh] bg-backgroundPrimary">
 			<img
 				src="/assets/background.jpg"
 				alt="background"
-				class="object-cover w-screen h-[120vh] opacity-30"
+				class="object-cover w-full h-[120vh] opacity-30"
 			/>
 			<h1
 				class="absolute top-[75vh] left-1/2 -translate-x-1/2 text-4xl lg:text-7xl font-bold"
@@ -54,7 +50,7 @@
 		</div>
 		<div
 			use:scrollRef={"about-1"}
-			class="w-screen h-screen my-[10vh] flex flex-col items-center justify-evenly"
+			class="w-full h-screen my-[10vh] flex flex-col items-center justify-evenly"
 		>
 			<AboutCard
 				imageUrl="/assets/about-1.JPG"
@@ -69,7 +65,7 @@
 		</div>
 		<div
 			use:scrollRef={"about-2"}
-			class="h-screen my-[10vh] w-screen flex flex-col items-center justify-evenly"
+			class="h-screen my-[10vh] w-full flex flex-col items-center justify-evenly"
 		>
 			<AboutCard
 				imageUrl="/assets/about-2.JPG"
@@ -79,7 +75,7 @@
 			friends."
 			/>
 		</div>
-		<div use:scrollRef={"portfolio"} class="w-screen h-screen my-[10vh]">
+		<div use:scrollRef={"portfolio"} class="w-full h-screen my-[10vh]">
 			<div
 				class="w-4/5 h-4/5 lg:w-[1000px] lg:h-[700px] relative top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2"
 			>
@@ -88,10 +84,10 @@
 		</div>
 		<div
 			use:scrollRef={"contact"}
-			class="w-screen h-screen mt-[10vh] flex items-end"
+			class="w-full h-screen mt-[10vh] flex items-end"
 		>
 			<div
-				class="flex flex-col items-center justify-around py-12 w-screen h-1/3 bg-backgroundSecondary lg:text-2xl text-xl"
+				class="flex flex-col items-center justify-around py-12 w-full h-1/3 bg-backgroundSecondary lg:text-2xl text-xl"
 			>
 				<div>metekeremberk@gmail.com</div>
 				<div>+90 5** *** ** **</div>
