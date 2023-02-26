@@ -90,7 +90,6 @@
 				class="flex flex-col items-center justify-around py-12 w-full h-1/3 bg-backgroundSecondary lg:text-2xl text-xl"
 			>
 				<div>metekeremberk@gmail.com</div>
-				<div>+90 5** *** ** **</div>
 				<div>Social media</div>
 			</div>
 		</div>
